@@ -1,0 +1,7 @@
+
+.heading-para{
+  font-size: 82px;margin-top: 60px;height: 100px;
+  background: -webkit-linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

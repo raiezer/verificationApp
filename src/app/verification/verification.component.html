@@ -1,0 +1,37 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-12"
+        style="background-color :#20bf55;
+        background-image :linear-gradient(315deg, #20bf55 0%, #01baef 74%);;height: 260px;width: 100%;text-align: center;"> 
+         <p class="heading-para"
+               >Verify Your Mobile Number
+            </p>
+            <pre>An 6-digit Code has been sent to {{serv.phone_no}}</pre>
+            
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col" style="background-color: rgb(255, 255, 255);height: 25px;"></div>
+</div>
+
+<div class="row" style="background-color: rgb(255, 255, 255); text-align: 
+center;align-items: center;flex-flow: column wrap;">
+    <form  >
+        <ng-otp-input 
+        (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+        <div class="row">
+            <div class="col" style="background-color: rgb(255, 255, 255);height: 25px;"></div>
+        </div>
+        <div class="row" style="text-align: center;align-items: center; flex-flow: column wrap;">
+            <button type="submit" class="btn btn-primary btn-lg " [disabled]="otp.length != 6"
+           
+             (click)='verifyData()'
+            style="padding: 8px 42px;background-color: rgb(19, 121, 110);">Verify
+            </button>
+        </div>
+    </form>
+</div>
+
+</div>

@@ -1,0 +1,65 @@
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 heading-bar">
+                
+                    <p class="heading-para"
+                       >MOBILE VERIFICATION
+                    </p>
+                    <pre>please enter your mobile number to verify the account</pre>
+                    
+            </div>
+        </div>
+   
+    <div class="row">
+        <div class="col" style="background-color: rgb(255, 255, 255);height: 25px;"></div>
+    </div>
+
+    <div class="row " style="text-align: center; ;display: flex;background-color: rgb(255, 255, 255);height: 40px;
+    flex-flow: column wrap;
+    align-items: center;" >
+        
+        <form  [formGroup]="form"  (submit)='post_phoneNo()'>
+            
+            <div class="col-md-12" style="background-color: rgb(255, 255, 255);">
+                
+                <div class="input-group form-group" style="background-color: #ffffff;">
+
+                    <span class="input-group-prepend">
+                        <div class="input-group-text  border-right-0" style="background-color: #01baef;">
+                            <i class="fa fa-phone-alt" style="color: white;"></i>
+                        </div>
+                    </span>
+                    
+                    <input required
+                        class="form-control py-2 border-left-0 border" 
+                        name="phone" formControlName="phone"
+                         id="phone"
+                        type="number" 
+                        placeholder="Mobile Number here.." >
+                    <span class="input-group-append">
+                   
+                    <button class="btn btn-outline-secondary border-left-0 border submitbtn" [disabled]='!form.valid'
+                    type="submit" style="background-color: rgb(44, 230, 211);">
+                    
+                    Submit</button> 
+                  </span>
+                  
+                </div>
+               
+               
+            </div>
+            
+        </form>
+    </div>
+
+    <div class="row" style="text-align: center;">
+        <div class="col" style="background-color: rgb(255, 255, 255);">
+            <div *ngIf='form.get("phone").touched && form.get("phone").invalid' style="background-color: #ffffff;"> 
+                <div *ngIf='form.get("phone").errors.required' style="color: red;font-size: 12px;">Mobile Number is required**</div>
+                <div *ngIf='form.get("phone").errors.pattern' style="color: red;font-size: 12px;">Please enter valid Mobile Number</div>
+              </div>
+        </div>
+    </div>
+   
+

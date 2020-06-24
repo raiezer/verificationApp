@@ -1,0 +1,27 @@
+.heading-bar{
+  background-color :#20bf55;
+  background-image :linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  height: 260px;width: 100%;text-align: center;
+                
+}
+
+.heading-para{
+    color: white;
+    margin-top: 100px;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.submitbtn:hover{
+    background-color: #20bf55;
+}
